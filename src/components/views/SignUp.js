@@ -39,9 +39,8 @@ const Signup = () => {
                 <Progress percent={50} indicating style={style.progress}>{'50% Complete'}</Progress>
             </Sticky>
             <Container style={style.containerStyle}>
-
-                <SignupForm onSubmit={onSubmitHandler} />
-            </Container>
+                 <SignupForm onSubmit={onSubmitHandler} />
+             </Container>
         </>
     )
 }

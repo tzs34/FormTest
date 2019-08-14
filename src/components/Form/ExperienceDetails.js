@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import { Form,  Transition } from 'semantic-ui-react'
-import DatePicker from 'react-datepicker';
+import { Input, Form,  Transition } from 'semantic-ui-react'
+import DatePicker from 'react-datepicker'
+import styled from 'styled-components'
 import Copy from '../../utils/copy'
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -10,17 +11,26 @@ const {
     showFormElement:{showParaLegalQuestionAnswer},
 } = Copy
 
+const DatePickerContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-top:3px;
+    color: rgba(0,0,0,.87);
+    font-size: .92857143em;
+    font-weight: 700;
+`
 const ExperienceDetails = ({onSelected}) => {
 
     const [qualification, setQualification] = useState(null)
     const [workType, setWorkType] = useState(null)
     const [paralegal, setParalegal] = useState(null)
+    const [contractFirmStartDate, setContractFirmStartDate] = useState()
 
     useEffect(() => {
          if(onSelected){
-             onSelected({qualification, workType})
+             onSelected({qualification, workType, contractFirmStartDate})
          }
-      }, [qualification, workType]);
+      }, [qualification, workType, contractFirmStartDate]);
 
     function renderRadioButtons(data, checkedValue, callback){
        return data.map(({label, value}, index) => {
@@ -71,6 +81,25 @@ const ExperienceDetails = ({onSelected}) => {
                     </div>
                 </Transition>
             }
+            <div className="two fields">
+                    <Form.Field required>
+                        <label>Training Contract Firm</label>
+                        <Input placeholder="contract-firm" name="contractFirm"/>
+                      </Form.Field>
+                      <Form.Field required>
+                        <DatePickerContainer>
+                        <div> 
+                            <label>Training Contract Start Date</label>
+                        </div>
+                        <div>
+                            <DatePicker
+                                onChange={(date) => setContractFirmStartDate(date)}
+                                placeholderText="Select Start Date"
+                                />
+                        </div>
+                        </DatePickerContainer>
+                    </Form.Field>
+                </div>
 
                
         </>

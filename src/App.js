@@ -1,12 +1,13 @@
 import * as React from 'react'
 import { Router } from '@reach/router'
-
-import styled, { createGlobalStyle  } from "styled-components";
+import { createGlobalStyle  } from "styled-components";
 import {
   Signup,
   Preview
 } from './components'
 import FormProvider from './context/FormContextProvider';
+
+require('dotenv').config()
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
@@ -26,8 +27,8 @@ const App = () => (
           <Signup path="/" />
           <Preview path="/search-details" />
       </Router>
-      </FormProvider>
-    </>
+    </FormProvider>
+  </>
 )
 
 export default App

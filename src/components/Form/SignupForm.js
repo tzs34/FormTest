@@ -4,6 +4,7 @@ import 'react-dates/initialize'
 import ContactDetails from './ContactDetails'
 import ExperienceDetails from './ExperienceDetails';
 import LanguageDetails from './LanguageDetails'
+import UploadButton from '../buttons/UploadButton'
 import Copy from '../../utils/copy'
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -42,13 +43,13 @@ const {
     }
 
     return (
-            <form className="ui form" onSubmit={handleOnSubmit}>
+          <form className="ui form" onSubmit={handleOnSubmit}>
             <ContactDetails onBlur={handleOnBlur} />
             <ExperienceDetails onSelect={handleOnSelect} />
             <LanguageDetails onSelect={handleOnSelect} />
-            <Form.Button>Submit</Form.Button>
-        
-         </form>
+            < UploadButton />
+            <Form.Button>Submit Your Details</Form.Button>
+          </form>
     )
   }
 

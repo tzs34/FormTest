@@ -32,8 +32,6 @@ const LanguageSelection = () => {
             setLanguages(languageCollection)
         }
 
-        console.log(languages)
-
         return (
             <>
              <h4 className="ui dividing header">{'List the languages you know'}</h4>
