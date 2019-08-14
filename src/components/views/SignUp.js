@@ -1,6 +1,5 @@
-import React, { useRef, useContext } from "react";
+import React, { useRef } from "react";
 import { Header, Sticky, Container } from "semantic-ui-react";
-import { FormContext } from "../../context/FormContextProvider";
 import SignupForm from "../Form/SignupForm";
 import Copy from "../../utils/copy";
 
@@ -24,11 +23,13 @@ const style = {
   }
 };
 
-const Signup = () => {
+const Signup = ({ navigate }) => {
   const headerRef = useRef(null);
-  const context = useContext(FormContext);
 
-  function onSubmitHandler() {}
+  function onSubmitHandler(e) {
+    e.preventDefault();
+    navigate("/signup-details");
+  }
 
   return (
     <>

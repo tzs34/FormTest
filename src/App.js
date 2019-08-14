@@ -20,7 +20,7 @@ const App = () => (
     <FormProvider>
       <Router>
         <Signup path="/" />
-        <Preview path="/search-details" />
+        <Preview path="/signup-details" />
       </Router>
     </FormProvider>
   </>

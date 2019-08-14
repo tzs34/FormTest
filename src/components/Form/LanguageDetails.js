@@ -9,13 +9,12 @@ const {
 } = Copy;
 
 const LanguageSelection = () => {
-
   let [languages, setLanguages] = useState([]);
   const context = useContext(FormContext);
 
   function handleOnChange(e, { value, id }) {
     languages = [...languages, value];
-    context.dispatch({languages})
+    context.dispatch({ languages });
     setLanguages(languages);
   }
   function renderLanguageCards(list) {

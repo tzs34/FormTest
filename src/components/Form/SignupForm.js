@@ -8,7 +8,6 @@ import UploadButton from "../buttons/UploadButton";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-
 const style = {
   h3: {
     marginTop: "2em",
@@ -20,19 +19,19 @@ const style = {
   }
 };
 
-const SignupForm = () => (
+const SignupForm = ({ onSubmit }) => (
   <>
-  <Header as="h3" textAlign="center" style={style.h3}>
-      {'Sign up with F-LEX'}
-  </Header>
-  <form className="ui form" >
-    <ContactDetails  />
-    <ExperienceDetails  />
-    <LanguageDetails  />
-    <UploadButton />
-    <Form.Button>Submit Your Details</Form.Button>
-  </form>
-</>
-)
+    <Header as="h3" textAlign="center" style={style.h3}>
+      {"Sign up with F-LEX"}
+    </Header>
+    <form className="ui form" onSubmit={onSubmit}>
+      <ContactDetails />
+      <ExperienceDetails />
+      <LanguageDetails />
+      <UploadButton />
+      <Form.Button>Submit Your Details</Form.Button>
+    </form>
+  </>
+);
 
 export default SignupForm;

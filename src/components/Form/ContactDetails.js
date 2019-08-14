@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Input, Form, Select } from "semantic-ui-react";
+import { FormContext } from "../../context/FormContextProvider";
 import Copy from "../../utils/copy";
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -9,20 +10,16 @@ const {
   options: { locationOptions, referralOptions }
 } = Copy;
 
-const ContactDetails = ({ onBlur, onSelect}) => {
+const ContactDetails = () => {
+  const context = useContext(FormContext);
 
   function handleOnBlur(e) {
-    let { value, name, required} = e.currentTarget;
-    console.log(` I am required ${required} and have value ${value} and id = ${name}`)
-    if (onBlur) {
-      onBlur({[name]: value, required});
-    }
+    let { value, name, required } = e.currentTarget;
+    context.dispatch({ [name]: value, required });
   }
 
-  function handleOnSelect(e, {name, value}) {
-    if (onSelect) {
-      onSelect({[name]: value});
-    }
+  function handleOnSelect(e, { name, value }) {
+    context.dispatch({ [name]: value });
   }
 
   return (
@@ -40,44 +37,46 @@ const ContactDetails = ({ onBlur, onSelect}) => {
         </Form.Field>
         <Form.Field required>
           <label>Surname</label>
-          <Input 
-          placeholder="Surname" 
-          name="surname" 
-          onBlur={handleOnBlur}
-          required={true}
+          <Input
+            placeholder="Surname"
+            name="surname"
+            onBlur={handleOnBlur}
+            required={true}
           />
         </Form.Field>
       </div>
       <div className="two fields">
         <Form.Field required>
           <label>Email</label>
-          <Input 
-          placeholder="Email" 
-          name="email" 
-          onBlur={handleOnBlur}
-          required={true}/>
+          <Input
+            placeholder="Email"
+            name="email"
+            onBlur={handleOnBlur}
+            required={true}
+          />
         </Form.Field>
         <Form.Field required>
           <label>Phone Number</label>
-          <Input 
-          placeholder="Phone Number" 
-          name="phone"
-          onBlur={handleOnBlur}
-          required={true} />
+          <Input
+            placeholder="Phone Number"
+            name="phone"
+            onBlur={handleOnBlur}
+            required={true}
+          />
         </Form.Field>
       </div>
       <div className="two fields">
         <Form.Field
-          name='location'
+          name="location"
           control={Select}
           search={true}
           label="Where are you based ?"
           options={locationOptions}
           placeholder="Location"
-         onChange={handleOnSelect}
+          onChange={handleOnSelect}
         />
         <Form.Field
-          name='referral'
+          name="referral"
           control={Select}
           search={true}
           label="How did you hear about F-LEX ?"
