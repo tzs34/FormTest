@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
-const Preview = () => (
-    <div>Preview</div>
-)
+const Preview = () => <div>Preview</div>;
 
-export default Preview
+export default Preview;
