@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## To run the project
 
 1. Clone the repo to your local machine
-2. You will have to supply a .env file with the url to upload the pdf - this is in the task description. The endpoint should have the key 'REACT_APP_S3_BUCKET_ENDPOINT'.
+2. You will have to supply a .env file in the root of the project, with the url to upload the pdf - this is in the task description. The endpoint should have the key 'REACT_APP_S3_BUCKET_ENDPOINT'.
 3. Run ' npm install' to install the required dependencies.
 4. Run 'npm start', this command runs the app in the development mode
 5. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
