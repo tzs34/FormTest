@@ -1,12 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import { Input, Form, Select} from 'semantic-ui-react'
 import 'react-dates/initialize'
+import {FormContext } from '../../context/FormContextProvider'
 import ContactDetails from './ContactDetails'
 import ExperienceDetails from './ExperienceDetails';
 import LanguageDetails from './LanguageDetails'
 import UploadButton from '../buttons/UploadButton'
 import Copy from '../../utils/copy'
-
+import {UPDATE_FORM_STATE} from '../../reducer'
 import "react-datepicker/dist/react-datepicker.css";
 
 
@@ -30,8 +31,14 @@ const {
 
   const SignupForm = () => {
 
-    function handleOnBlur(e){
+    const context = useContext(FormContext)
 
+    function handleOnBlur({currentTarget:{value, name}}){
+
+      context.dispatch({
+        type: UPDATE_FORM_STATE,
+        payload: {[name]:value, isValid: false}
+      })
     }
 
     function handleOnSelect(){

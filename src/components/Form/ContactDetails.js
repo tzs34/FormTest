@@ -12,27 +12,32 @@ const {
 } = Copy
 const ContactDetails = ({onBlur}) => {
 
+    function handleOnBlur(e, value){
+        if(onBlur){
+            onBlur(e, value)
+        }
+    }
     return (
         <>
         <h4 className="ui dividing header">{personalInfo}</h4>
          <div className="two fields">
                     <Form.Field required>
                         <label>First Name</label>
-                        <Input placeholder="First Name" name="firstName"/>
+                        <Input placeholder="First Name" name="firstName" onBlur={handleOnBlur}/>
                       </Form.Field>
                       <Form.Field required>
                           <label>Surname</label>
-                          <Input placeholder="Surname" name="shipping[surname]"/>
+                          <Input placeholder="Surname" name="surname"/>
                       </Form.Field>
                 </div>
                   <div className="two fields">
                     <Form.Field required>
                       <label>Email</label>
-                      <Input placeholder="Email" name="shipping[email]"/>
+                      <Input placeholder="Email" name="email" onBlur={handleOnBlur}/>
                     </Form.Field>
                     <Form.Field required>
                         <label>Phone Number</label>
-                        <Input placeholder="Phone Number" name="shipping[phone]"/>
+                        <Input placeholder="Phone Number" name="phone"/>
                     </Form.Field>
                     </div>
                   <div className="two fields">

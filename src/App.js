@@ -7,8 +7,6 @@ import {
 } from './components'
 import FormProvider from './context/FormContextProvider';
 
-require('dotenv').config()
-
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
   body {

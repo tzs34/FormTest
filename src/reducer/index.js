@@ -2,14 +2,13 @@
 const UPDATE_FORM_STATE = 'UPDATE_FORM_STATE'
 const FILE_UPLOAD_STATUS = 'FILE_UPLOAD_STATUS'
 
-const formReducer = (state, action) => {
-    switch(action.type) {
+const formReducer = (state, {type, payload}) => {
+    switch(type) {
       case UPDATE_FORM_STATE: 
-        return state
-        case FILE_UPLOAD_STATUS:
-            console.log(action.payload)
-      
-      default: return state
+        return {...state, ...payload}
+    case FILE_UPLOAD_STATUS:
+        return {...state, ...payload}
+    default: return state
     }
   }
 

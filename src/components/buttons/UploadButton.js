@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState, useRef} from 'react'
 import { Button, Icon, Form} from 'semantic-ui-react'
-import {useS3FileUpload} from '../../utils/app-utils'
+import {uploadFileToS3} from '../../utils/app-utils'
 import {FormContext } from '../../context/FormContextProvider'
 import {FILE_UPLOAD_STATUS} from '../../reducer'
 
@@ -8,21 +8,28 @@ const UploadButton = () => {
 
     const [file, setFile] = useState({name: null})
     const fileInputRef = useRef(null)
-    const [fileUploadStatus, uploadFile] = useS3FileUpload()
+    let fileRef = useRef(null)
     const context = useContext(FormContext)
 
+    async function uploadFile(file){
+            let payload = await uploadFileToS3(file) 
+            console.log('payload --------------------')
+            console.log(payload)
+            context.dispatch({type: FILE_UPLOAD_STATUS, payload})   
+    }
+
     useEffect(() => {
-        if(file.name){
+        if(file.name && file.name !== fileRef.name){
             uploadFile(file)            
         }
-        context.dispatch({type: FILE_UPLOAD_STATUS, payload:fileUploadStatus})
-     }, [file.name, fileUploadStatus]);
+     }, [file.name]);
 
     function onFileChange({target:{files}}){
         let uploadedFile = files[0]
         setFile(uploadedFile)
     }
 
+    console.log('upload Button')
 
     return (
             <>
