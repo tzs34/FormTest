@@ -18,7 +18,7 @@ Routing within the app is taken care of by reach-router which is very easy too i
 
 I implemented styled-components for additional styling as it is my favourite way of styling React applications.
 
-I took advantage of the latest version of React to use Hooks wherebver I could, this includes using useReducer and useCointext hooks to implement a simple app state management solution.
+I took advantage of the latest version of React to use Hooks whenever I could, this includes using useReducer and useCointext hooks to implement a simple app state management solution.
 
 The application is by no means finished , I need to remove magic strinbgs for labels and so on into the src.utils/copy file as demonstrated within the application. I also need to build out the user details preview page at present it ony loads the user sign in PDF. Tests and other none requirements were also left out as wre most a11y considerations, due to time considerations.
 
