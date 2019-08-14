@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Form, Select } from "semantic-ui-react";
+import { FormContext } from "../../context/FormContextProvider";
 import LanguageCard from "../cards/LanguageCard";
 import Copy from "../../utils/copy";
 
 const {
-  options: { languageLevelOptions, languageOptions }
+  options: { languageOptions }
 } = Copy;
 
 const LanguageSelection = () => {
+
   let [languages, setLanguages] = useState([]);
+  const context = useContext(FormContext);
 
   function handleOnChange(e, { value, id }) {
     languages = [...languages, value];
+    context.dispatch({languages})
     setLanguages(languages);
   }
   function renderLanguageCards(list) {
