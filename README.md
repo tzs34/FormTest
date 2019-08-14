@@ -1,68 +1,25 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## To run the project
 
-In the project directory, you can run:
+1. Clone the repo to your local machine
+2. You will have to supply a .env file with the url to upload the pdf - this is in the task description. The endpoint should have the key 'REACT_APP_S3_BUCKET_ENDPOINT'.
+3. Run ' npm install' to install the required dependencies.
+4. Run 'npm start', this command runs the app in the development mode
+5. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm start`
+#### About the application
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The application attempts to replicate the functionality of the company login page.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+The application uses create-react-app for ease of development and  semantic-ui-react as the component framework. I had not used semantic-ui before and was interested in trying it out. Overall I think the layout, responsiveness and look of the framework components is very good. However, I did not realise the framework did not have a datepicker component and had to use a third party datepicker.
 
-### `npm test`
+Routing within the app is taken care of by reach-router which is very easy too implement and has some nice a11y features.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I implemented styled-components for additional styling as it is my favourite way of styling React applications.
 
-### `npm run build`
+I took advantage of the latest version of React to use Hooks wherebver I could, this includes using useReducer and useCointext hooks to implement a simple app state management solution.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application is by no means finished , I need to remove magic strinbgs for labels and so on into the src.utils/copy file as demonstrated within the application. I also need to build out the user details preview page at present it ony loads the user sign in PDF. Tests and other none requirements were also left out as wre most a11y considerations, due to time considerations.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+I hope you like what I have domne and would be happy to discuss any aspects of my approach if you wish.
