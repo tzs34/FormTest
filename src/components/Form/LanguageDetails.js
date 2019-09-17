@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Form, Select } from "semantic-ui-react";
-import { FormSubHeader, Row } from '../styled-components/components';
+import { FormSubHeader, Row, WrapRow } from '../styled-components/components';
 import { FormContext } from "../../context/FormContextProvider";
 import LanguageCard from "../cards/LanguageCard";
 import Copy from "../../utils/copy";
@@ -21,13 +21,11 @@ const LanguageSelection = () => {
   function renderLanguageCards(list) {
     return list.map((language, index) => {
       return (
-        <Row>
         <LanguageCard
           key={`${language}${index}`}
           language={language}
           deleteItem={deleteLanguage}
         />
-        </Row>
       );
     });
   }
@@ -40,7 +38,11 @@ const LanguageSelection = () => {
   return (
     <>
       <FormSubHeader>{"List the languages you know"}</FormSubHeader >
-      {languages.length > 0 && renderLanguageCards(languages)}
+      {languages.length > 0 && 
+        <WrapRow>{
+          renderLanguageCards(languages)
+        }
+        </WrapRow>}
       <Row>
         <Form.Field
           id="language"
