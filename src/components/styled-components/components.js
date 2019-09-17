@@ -30,6 +30,10 @@ export const WrapRow = styled.div`
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
+
+    @media (max-width: 480px)   {
+        justify-content: center;
+    }
 `;
 
 export const DatePickerContainer = styled.div`
