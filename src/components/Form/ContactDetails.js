@@ -80,7 +80,7 @@ const ContactDetails = () => {
           name="referral"
           control={Select}
           search={true}
-          label="How did you hear about F-LEX ?"
+          label="How did you hear about Company-X ?"
           options={referralOptions}
           placeholder="Referral"
           onChange={handleOnSelect}
