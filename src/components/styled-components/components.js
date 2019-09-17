@@ -39,7 +39,7 @@ export const TwoFieldContainer = styled.div`
     margin: 0 10em;
     justify-content: space-evenly;
 
-    @media only screen and (max-width: 768px)}  {
+    @media (max-width: 480px)   {
         margin: 0.25em;
         flex-direction: column;
     }
