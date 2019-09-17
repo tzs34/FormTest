@@ -38,7 +38,7 @@ const UploadButton = () => {
           type="button"
           animated="fade"
           size='large'
-          style={{"width": "200px"}}
+          style={{"width": "200px", "z-index": "0"}}
           onClick={() => fileInputRef.current.click()}
         >
           <Button.Content visible>

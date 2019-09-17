@@ -5,8 +5,6 @@ import DatePicker from "react-datepicker";
 import { FormSubHeader, DatePickerContainer, TwoFieldContainer } from '../styled-components/components'
 import Copy from "../../utils/copy";
 
-import "react-datepicker/dist/react-datepicker.css";
-
 const {
   options: { qualificationOptions, workOptions, paralegalOptions },
   showFormElement: { showParaLegalQuestionAnswer }
@@ -17,7 +15,7 @@ const ExperienceDetails = () => {
   const [qualification, setQualification] = useState(null);
   const [workType, setWorkType] = useState(null);
   const [paralegal, setParalegal] = useState(null);
-  const [contractFirmStartDate, setContractFirmStartDate] = useState();
+  const [contractFirmStartDate, setContractFirmStartDate] = useState(new Date());
   const context = useContext(FormContext);
 
   useEffect(() => {
@@ -92,6 +90,8 @@ const ExperienceDetails = () => {
               <DatePicker
                 onChange={date => setContractFirmStartDate(date)}
                 placeholderText="Select Start Date"
+                selected={contractFirmStartDate}
+
               />
             </div>
           </DatePickerContainer>

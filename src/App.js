@@ -4,6 +4,8 @@ import { createGlobalStyle } from "styled-components";
 import { Signup, Preview } from "./components";
 import FormProvider from "./context/FormContextProvider";
 
+import './index.css'
+
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
   body {
