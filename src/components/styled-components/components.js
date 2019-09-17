@@ -6,9 +6,10 @@ export const FormContainer = styled.div`
     padding: 10px;
 `
 export const FormSubHeader = styled.h3`
+    width: calc(100% - 200);
     text-align: center;
     padding: 8px;
-    border-bottom: 1px solid rgba(34,36,38,.15);
+    border-bottom: 1px solid  rgb(63, 81, 181);
 `
 export const FormHeader = styled.h2`
     text-align: center;
@@ -30,3 +31,18 @@ export const DatePickerContainer = styled.div`
     font-size: 0.92857143em;
     font-weight: 700;
 `;
+
+export const TwoFieldContainer = styled.div`
+    display: flex;
+    box-orient: horizontal;
+    box-direction: normal;
+    margin: 0 10em;
+    justify-content: space-evenly;
+
+    @media only screen and (max-width: 768px)}  {
+        margin: 0.25em;
+        flex-direction: column;
+    }
+
+
+`
