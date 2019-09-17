@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+
+export const FormContainer = styled.div`
+    margin-top: 20px;
+    padding: 10px;
+`
 export const FormSubHeader = styled.h3`
     text-align: center;
     padding: 8px;
