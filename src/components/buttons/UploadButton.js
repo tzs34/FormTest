@@ -30,14 +30,15 @@ const UploadButton = () => {
 
   return (
     <Row>
-      <div>
+      <div style={{"width" : "100%", "margin-bottom":"10px"}}>
       <FormSubHeader >{'Send us your curriculum vitae'}</FormSubHeader>
-      <Form.Field>
-        <label>Select your Curriculum Vitae & Upload </label>
+      <Row>
         <Button
-          as="label"
+          ref={fileInputRef}
           type="button"
           animated="fade"
+          size='large'
+          style={{"width": "200px"}}
           onClick={() => fileInputRef.current.click()}
         >
           <Button.Content visible>
@@ -46,14 +47,7 @@ const UploadButton = () => {
           <Button.Content hidden>Choose a File</Button.Content>
         </Button>
         <input type="file" ref={fileInputRef} hidden onChange={onFileChange} />
-        <Form.Input
-          fluid
-          label="File Chosen: "
-          placeholder="Use the above bar to browse your file system"
-          readOnly
-          value={file.name}
-        />
-      </Form.Field>
+      </Row>
     </div>
   </Row>
   );

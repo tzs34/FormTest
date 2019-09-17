@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Input, Form, Select } from "semantic-ui-react";
-import { FormSubHeader} from '../styled-components/components'
+import { FormSubHeader, TwoFieldContainer} from '../styled-components/components'
 import { FormContext } from "../../context/FormContextProvider";
 import Copy from "../../utils/copy";
 
@@ -26,7 +26,7 @@ const ContactDetails = () => {
   return (
     <>
       <FormSubHeader >{personalInfo}</FormSubHeader>
-      <div className="two fields">
+      <TwoFieldContainer>
         <Form.Field required>
           <label>First Name</label>
           <Input
@@ -45,8 +45,8 @@ const ContactDetails = () => {
             required={true}
           />
         </Form.Field>
-      </div>
-      <div className="two fields">
+      </TwoFieldContainer>
+      <TwoFieldContainer>
         <Form.Field required>
           <label>Email</label>
           <Input
@@ -65,8 +65,8 @@ const ContactDetails = () => {
             required={true}
           />
         </Form.Field>
-      </div>
-      <div className="two fields">
+      </TwoFieldContainer>
+      <TwoFieldContainer>
         <Form.Field
           name="location"
           control={Select}
@@ -85,7 +85,7 @@ const ContactDetails = () => {
           placeholder="Referral"
           onChange={handleOnSelect}
         />
-      </div>
+      </TwoFieldContainer>
     </>
   );
 };

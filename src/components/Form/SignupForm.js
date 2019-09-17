@@ -12,6 +12,8 @@ import "react-datepicker/dist/react-datepicker.css";
 
 const {headers:{signupHeader}} = Copy
 
+const buttonStyle = {"background-color": "rgb(63, 81, 181)", "color":"white", "padding": "1em 0.5em", "margin-bottom": "40px"};
+
 const SignupForm = ({ onSubmit }) => (
   <>
       <FormHeader>
@@ -22,7 +24,12 @@ const SignupForm = ({ onSubmit }) => (
       <ExperienceDetails />
       <LanguageDetails />
       <UploadButton />
-      <Form.Button size='medium'>Submit Your Details</Form.Button>
+      <FormHeader>
+      {'Thats it ! Please send us your details'}
+    </FormHeader>
+    <Form.Field style={{"display": "flex", "justify-content":"center"}}>
+      <Form.Button size='medium' style={buttonStyle}>Submit Your Details</Form.Button>
+    </Form.Field>
     </form>
   </>
 );

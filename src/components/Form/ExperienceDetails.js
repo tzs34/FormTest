@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { Input, Form, Transition } from "semantic-ui-react";
 import { FormContext } from "../../context/FormContextProvider";
 import DatePicker from "react-datepicker";
-import { FormSubHeader, DatePickerContainer } from '../styled-components/components'
+import { FormSubHeader, DatePickerContainer, TwoFieldContainer } from '../styled-components/components'
 import Copy from "../../utils/copy";
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -45,7 +45,7 @@ const ExperienceDetails = () => {
   return (
     <>
       <FormSubHeader>Your experience</FormSubHeader>
-      <div className="two fields">
+      <TwoFieldContainer>
         <Form.Group grouped={true}>
           <label>Are you a qualified lawyer?</label>
           {renderRadioButtons(
@@ -59,7 +59,7 @@ const ExperienceDetails = () => {
           <label>What type of work are you looking for ?</label>
           {renderRadioButtons(workOptions, workType, setWorkType)}
         </Form.Group>
-      </div>
+      </TwoFieldContainer>
       {showParalegalSection && (
         <Transition
           visible={showParalegalSection}
@@ -78,7 +78,7 @@ const ExperienceDetails = () => {
           </div>
         </Transition>
       )}
-      <div className="two fields">
+      <TwoFieldContainer>
         <Form.Field required>
           <label>Training Contract Firm</label>
           <Input placeholder="contract-firm" name="contractFirm" />
@@ -96,7 +96,7 @@ const ExperienceDetails = () => {
             </div>
           </DatePickerContainer>
         </Form.Field>
-      </div>
+      </TwoFieldContainer>
     </>
   );
 };
