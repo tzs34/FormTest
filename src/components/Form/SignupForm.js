@@ -1,6 +1,6 @@
 import React from "react";
-import { Header, Form } from "semantic-ui-react";
 import "react-dates/initialize";
+import { Form } from "semantic-ui-react";
 import { FormHeader } from '../styled-components/components'
 import ContactDetails from "./ContactDetails";
 import ExperienceDetails from "./ExperienceDetails";
