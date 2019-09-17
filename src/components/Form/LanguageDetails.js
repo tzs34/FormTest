@@ -14,9 +14,11 @@ const LanguageSelection = () => {
   const context = useContext(FormContext);
 
   function handleOnChange(e, { value, id }) {
-    languages = [...languages, value];
-    context.dispatch({ languages });
-    setLanguages(languages);
+    if(!languages.includes(value)){
+      languages = [...languages, value];
+      context.dispatch({ languages });
+      setLanguages(languages);
+    }
   }
   function renderLanguageCards(list) {
     return list.map((language, index) => {
