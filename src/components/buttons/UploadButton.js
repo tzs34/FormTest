@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState, useRef } from "react";
 import { Button, Icon, Form } from "semantic-ui-react";
+import { Row } from '../styled-components/components'
+import { FormSubHeader } from '../styled-components/components';
 import { uploadFileToS3 } from "../../utils/app-utils";
 import { FormContext } from "../../context/FormContextProvider";
 import { FILE_UPLOAD_STATUS } from "../../reducer";
@@ -27,7 +29,9 @@ const UploadButton = () => {
   }
 
   return (
-    <>
+    <Row>
+      <div>
+      <FormSubHeader >{'Send us your curriculum vitae'}</FormSubHeader>
       <Form.Field>
         <label>Select your Curriculum Vitae & Upload </label>
         <Button
@@ -50,7 +54,8 @@ const UploadButton = () => {
           value={file.name}
         />
       </Form.Field>
-    </>
+    </div>
+  </Row>
   );
 };
 

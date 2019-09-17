@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Input, Form, Select } from "semantic-ui-react";
+import { FormSubHeader } from '../styled-components/components'
 import { FormContext } from "../../context/FormContextProvider";
 import Copy from "../../utils/copy";
 
@@ -24,7 +25,7 @@ const ContactDetails = () => {
 
   return (
     <>
-      <h4 className="ui dividing header">{personalInfo}</h4>
+      <FormSubHeader >{personalInfo}</FormSubHeader>
       <div className="two fields">
         <Form.Field required>
           <label>First Name</label>

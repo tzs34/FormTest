@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Form, Select } from "semantic-ui-react";
+import { FormSubHeader } from '../styled-components/components';
 import { FormContext } from "../../context/FormContextProvider";
 import LanguageCard from "../cards/LanguageCard";
 import Copy from "../../utils/copy";
@@ -36,7 +37,7 @@ const LanguageSelection = () => {
 
   return (
     <>
-      <h4 className="ui dividing header">{"List the languages you know"}</h4>
+      <FormSubHeader>{"List the languages you know"}</FormSubHeader >
       {languages.length > 0 && renderLanguageCards(languages)}
       <div className="field">
         <Form.Field

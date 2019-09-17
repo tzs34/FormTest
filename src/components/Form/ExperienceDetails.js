@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { Input, Form, Transition } from "semantic-ui-react";
 import { FormContext } from "../../context/FormContextProvider";
 import DatePicker from "react-datepicker";
-import styled from "styled-components";
+import { FormSubHeader, DatePickerContainer } from '../styled-components/components'
 import Copy from "../../utils/copy";
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -12,14 +12,6 @@ const {
   showFormElement: { showParaLegalQuestionAnswer }
 } = Copy;
 
-const DatePickerContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 3px;
-  color: rgba(0, 0, 0, 0.87);
-  font-size: 0.92857143em;
-  font-weight: 700;
-`;
 
 const ExperienceDetails = () => {
   const [qualification, setQualification] = useState(null);
@@ -52,8 +44,7 @@ const ExperienceDetails = () => {
 
   return (
     <>
-      <h4 className="ui dividing header">Your experience</h4>
-
+      <FormSubHeader>Your experience</FormSubHeader>
       <div className="two fields">
         <Form.Group grouped={true}>
           <label>Are you a qualified lawyer?</label>

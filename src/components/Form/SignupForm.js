@@ -1,6 +1,7 @@
 import React from "react";
 import { Header, Form } from "semantic-ui-react";
 import "react-dates/initialize";
+import { FormSubHeader } from '../styled-components/components'
 import ContactDetails from "./ContactDetails";
 import ExperienceDetails from "./ExperienceDetails";
 import LanguageDetails from "./LanguageDetails";
@@ -29,7 +30,7 @@ const SignupForm = ({ onSubmit }) => (
       <ExperienceDetails />
       <LanguageDetails />
       <UploadButton />
-      <Form.Button>Submit Your Details</Form.Button>
+      <Form.Button size='medium'>Submit Your Details</Form.Button>
     </form>
   </>
 );
