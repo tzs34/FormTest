@@ -1,18 +1,7 @@
 import React from "react";
 import { Button, Icon } from "semantic-ui-react";
 import {Row, CardBox, CardLabel} from '../styled-components/components'
-import Copy from "../../utils/copy";
 
-const {
-  labels: { deleteLanguage }
-} = Copy;
-
-const style = {
-  header: {
-    fontSize: "1.25em",
-    fontWeight: 600
-  }
-};
 const LanguageCard = ({ language, deleteItem }) => {
   
   function handleOnClick(e) {

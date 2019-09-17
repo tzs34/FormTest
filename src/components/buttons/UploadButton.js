@@ -30,7 +30,7 @@ const UploadButton = () => {
 
   return (
     <Row>
-      <div style={{"width" : "100%", "margin-bottom":"10px"}}>
+      <div style={{"width" : "100%", "marginBottom":"10px"}}>
       <FormSubHeader >{'Send us your curriculum vitae'}</FormSubHeader>
       <Row>
         <Button
@@ -38,7 +38,7 @@ const UploadButton = () => {
           type="button"
           animated="fade"
           size='large'
-          style={{"width": "200px", "z-index": "0"}}
+          style={{"width": "200px"}}
           onClick={() => fileInputRef.current.click()}
         >
           <Button.Content visible>
