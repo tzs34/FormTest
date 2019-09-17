@@ -8,6 +8,7 @@ export const FormContainer = styled.div`
 export const FormSubHeader = styled.h3`
     text-align: center;
     padding: 8px;
+    border-bottom: 1px solid rgba(34,36,38,.15);
 `
 export const FormHeader = styled.h2`
     text-align: center;
