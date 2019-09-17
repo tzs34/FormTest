@@ -54,6 +54,7 @@ const LanguageSelection = () => {
           options={languageOptions}
           placeholder="Language"
           onChange={handleOnChange}
+          style={{"margin-bottom": "30px"}}
         />
       </Row>
     </>
