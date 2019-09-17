@@ -1,7 +1,7 @@
 export default {
   headers: {
-    companyHeader: "F-LEX",
-    signupHeader: "Sign up with F-LEX"
+    companyHeader: "Company-X",
+    signupHeader: "Sign up with Company-X"
   },
   formHeaders: {
     personalInfo: "About you"

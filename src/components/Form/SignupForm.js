@@ -6,13 +6,16 @@ import ContactDetails from "./ContactDetails";
 import ExperienceDetails from "./ExperienceDetails";
 import LanguageDetails from "./LanguageDetails";
 import UploadButton from "../buttons/UploadButton";
-
+import Copy from '../../utils/copy'
 import "react-datepicker/dist/react-datepicker.css";
+
+
+const {headers:{signupHeader}} = Copy
 
 const SignupForm = ({ onSubmit }) => (
   <>
-    <FormHeader>
-      {"Sign up with F-LEX"}
+      <FormHeader>
+      {signupHeader}
     </FormHeader>
     <form className="ui form" onSubmit={onSubmit}>
       <ContactDetails />
