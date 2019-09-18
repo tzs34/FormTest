@@ -6,16 +6,23 @@ export const FormContainer = styled.div`
     padding: 10px;
 `;
 
+export const CompanyName = styled.h1`
+    width: 100%;
+    color: white;
+    background-color: rgb(63, 81, 181);
+    padding: 2rem;
+`
+
+export const FormHeader = styled.h2`
+    text-align: center;
+    padding: 8px;
+`;
+
 export const FormSubHeader = styled.h3`
     width: calc(100% - 200);
     text-align: center;
     padding: 8px;
     border-bottom: 1px solid  rgb(63, 81, 181);
-`;
-
-export const FormHeader = styled.h2`
-    text-align: center;
-    padding: 8px;
 `;
 
 export const Row = styled.div`
@@ -66,7 +73,6 @@ export const CardBox = styled.div`
 `;
 
 export const CardLabel = styled.label`
-    font-size: 1em;
     font-weight: bold;
     margin: 1em;
 `;

@@ -16,7 +16,7 @@ const buttonStyle = {"backgroundColor": "rgb(63, 81, 181)", "color":"white", "pa
 
 const SignupForm = ({ onSubmit }) => (
   <>
-      <FormHeader>
+    <FormHeader>
       {signupHeader}
     </FormHeader>
     <form className="ui form" onSubmit={onSubmit}>

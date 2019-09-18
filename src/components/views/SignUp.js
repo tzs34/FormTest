@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Header, Sticky, Container } from "semantic-ui-react";
+import { CompanyName } from '../styled-components/components'
 import SignupForm from "../Form/SignupForm";
 import Copy from "../../utils/copy";
 
@@ -34,9 +35,9 @@ const Signup = ({ navigate }) => {
   return (
     <>
       <Sticky ref={headerRef}>
-        <Header as="h3" textAlign="left" style={style.h3}>
+        <CompanyName>
           {companyHeader}
-        </Header>
+        </CompanyName>
       </Sticky>
       <Container style={style.containerStyle}>
         <SignupForm onSubmit={onSubmitHandler} />
