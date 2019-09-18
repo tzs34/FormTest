@@ -1,5 +1,15 @@
-import styled from 'styled-components'
+import styled,  { keyframes, css } from 'styled-components'
 
+const fadeInKF = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`
+  
 
 export const FormContainer = styled.div`
     margin-top: 20px;
@@ -76,3 +86,16 @@ export const CardLabel = styled.label`
     font-weight: bold;
     margin: 1em;
 `;
+
+const fadeIn = css`
+    animation:  ${fadeInKF} 0.5s linear;
+    `
+
+export const FadeIn = styled.div`
+    ${fadeIn};
+`
+
+export const LanguageLabel = styled.div`
+    width: 100%;
+    height: 45px;
+`

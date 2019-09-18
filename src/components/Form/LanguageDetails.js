@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Form, Select } from "semantic-ui-react";
-import { FormSubHeader, Row, WrapRow } from '../styled-components/components';
+import { FormSubHeader, Row, WrapRow, LanguageLabel, FadeIn } from '../styled-components/components';
 import { FormContext } from "../../context/FormContextProvider";
 import LanguageCard from "../cards/LanguageCard";
 import Copy from "../../utils/copy";
@@ -40,7 +40,13 @@ const LanguageSelection = () => {
   return (
     <>
       <FormSubHeader>{"List the languages you know"}</FormSubHeader >
-      {languages.length > 0 && 
+      {languages.length === 0 ?
+        <Row>
+          <FadeIn>
+            <LanguageLabel>{'None Selected'}</LanguageLabel>
+          </FadeIn>
+        </Row>
+      :
         <WrapRow>{
           renderLanguageCards(languages)
         }
