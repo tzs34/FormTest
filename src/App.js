@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
   --h4:  calc(var(--h3) * var(--scale))em;
   --h5: calc(var(--h4) * var(--scale))em;
 
+
   h1{
       font-size: --h5
     }
@@ -39,6 +40,12 @@ const GlobalStyle = createGlobalStyle`
   h5{
       font-size: --h5;
     }  
+
+  :root {
+      --company-background-color: rgb(63, 81, 181);
+      --company-font-color: white;
+      --datepicker-color: rgba(0, 0, 0, 0.87);
+  }
         
   body {
       margin: 0;
