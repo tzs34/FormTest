@@ -8,8 +8,8 @@ export const FormContainer = styled.div`
 
 export const CompanyName = styled.h1`
     width: 100%;
-    color: white;
-    background-color: rgb(63, 81, 181);
+    color: var(--company-font-color);
+    background-color: var(--company-background-color);
     padding: 2rem;
 `
 
@@ -22,7 +22,7 @@ export const FormSubHeader = styled.h3`
     width: calc(100% - 200);
     text-align: center;
     padding: 8px;
-    border-bottom: 1px solid  rgb(63, 81, 181);
+    border-bottom: 1px solid  var(--company-background-color);
 `;
 
 export const Row = styled.div`
@@ -47,7 +47,7 @@ export const DatePickerContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 3px;
-    color: rgba(0, 0, 0, 0.87);
+    color: var(--datepicker-color);
     font-size: 0.92857143em;
     font-weight: 700;
 `;
