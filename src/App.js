@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
   body {
       margin: 0;
       font-family: 'Roboto', cursive;
-      font-size: font-size: var(---default-size)em; 
+      font-size: var(---default-size)em; 
       color: black;
     }
 `;
