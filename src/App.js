@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     using https://type-scale.com/
     at the scale of 1.250 - Major Third
   */
-  --default-size: ${props => props.size || 2.8};
+  --default-size: ${props => props.size || 0.8};
   --scale: ${props => props.scale || 1.25};
   --h1:  calc(var(---default-size) * var(--scale))em;
   --h2:  calc(var(--h1) * var(--scale))em;
